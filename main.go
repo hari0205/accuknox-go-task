@@ -22,7 +22,7 @@ func duplicateInArray(s []string) []string {
 	// if result == nil {
 	//	return false
 	// }
-	return result
+	return result // if result == s [] string then there are no duplicates
 }
 
 func main() {
@@ -41,7 +41,7 @@ func main() {
 	count := make(map[string]int)
 	bdata := bufio.NewScanner(file)
 	// bufferedData.Scan()
-	// bufferedData.Scan()
+	// bufferedData.Scan() // Skipping ( for test purposes only)
 	for bdata.Scan() {
 
 		//to split string
@@ -56,8 +56,6 @@ func main() {
 			//fmt.Println(food_id_arr)
 			hasDup := duplicateInArray(food_id_arr)
 			if len(hasDup) == len(food_id_arr) {
-				//fmt.Println("No duplicateInArray")
-				// Get Top 3 in restaurant
 				for key, num := range food_id_arr {
 					count[food_id_arr[key]] = count[num] + 1
 				}
